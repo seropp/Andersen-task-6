@@ -3,11 +3,11 @@ package com.example.contacts.domain.use_cases
 import com.example.contacts.domain.models.ContactDomain
 import com.example.contacts.domain.repository.ContactRepository
 
-class GetAllContactsUseCase(
+class SearchContactsUseCase(
     private val contactRepository: ContactRepository
 ) {
 
-    suspend fun execute(): List<ContactDomain>? {
-        return contactRepository.getContacts()
+    suspend fun execute(searchQuery: String): List<ContactDomain>? {
+        return contactRepository.searchContacts(searchQuery = searchQuery)
     }
 }

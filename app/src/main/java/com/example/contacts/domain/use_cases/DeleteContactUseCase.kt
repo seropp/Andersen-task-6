@@ -1,6 +1,5 @@
 package com.example.contacts.domain.use_cases
 
-import com.example.contacts.domain.models.Contact
 import com.example.contacts.domain.repository.ContactRepository
 
 class DeleteContactUseCase(
@@ -11,4 +10,3 @@ class DeleteContactUseCase(
         contactRepository.deleteContactById(id = id)
     }
 }
-

@@ -8,4 +8,6 @@
     <string name="please_enter_contact_last_name">Please enter contact last name</string>
     <string name="please_enter_contact_phone_number">Please enter contact phone number</string>
     <string name="save_contact">Save contact</string>
+    <string name="search">Search</string>
+    <string name="image_for_contact">Image for contact</string>
 </resources>

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id("kotlin-parcelize")
 }
 
 android {
@@ -35,12 +36,29 @@ android {
 
 dependencies {
 
+    // JavaFaker
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    // Coil
+    implementation "io.coil-kt:coil:1.1.1"
+
+    // Navigator
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.2")
+
+    // vm
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
 
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    implementation 'androidx.navigation:navigation-common-ktx:2.3.5'
 
     // Room
     def room_version = "2.4.2"

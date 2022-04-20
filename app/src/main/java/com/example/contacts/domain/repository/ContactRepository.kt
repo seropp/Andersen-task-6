@@ -1,18 +1,20 @@
 package com.example.contacts.domain.repository
 
-import androidx.lifecycle.LiveData
-import androidx.room.PrimaryKey
-import com.example.contacts.domain.models.Contact
+import com.example.contacts.domain.models.ContactDomain
 
 interface ContactRepository {
 
-    suspend fun addContact(contact: Contact)
+    suspend fun addContact(contactDomain: ContactDomain)
 
     suspend fun deleteContactById(id: Int?)
 
-    suspend fun getContact(id: Int?): Contact
+    suspend fun updateContact(contactDomain: ContactDomain)
 
-    suspend fun updateContact(contact: Contact)
+    suspend fun getContacts(): List<ContactDomain>?
 
-    fun getContacts(): LiveData<List<Contact>>
+    suspend fun searchContacts(searchQuery: String): List<ContactDomain>?
+
+    suspend fun addAllContacts(contactsList: List<ContactDomain>)
+
+    suspend fun checkRoom(): Boolean
 }
